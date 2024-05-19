@@ -1,6 +1,6 @@
 ### Project Details
 
-- Project Name: AH Baby Care Store (Baby Care Store Full Stack Project)
+- Project Name:  Pure Nest Store (Pure Nest Store Full Stack Project)
 - Project Technology:
   - Frontend: NextJS, TypeScript, Tailwind, Material UI.
   - Backend: Express, MongoDB, Mongoose, JavaScript.

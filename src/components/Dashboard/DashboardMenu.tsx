@@ -41,28 +41,25 @@ const DashboardMenu = ({ children }: { children: React.ReactNode }) => {
           width: { sm: `calc(100% - ${drawerWidth}px)` },
           ml: { sm: `${drawerWidth}px` },
           backgroundColor: "#0C1734",
-        }}
-      >
+        }}>
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ mr: 2, display: { sm: "none" }, color: "#fff" }}
-          >
+            sx={{ mr: 2, display: { sm: "none" }, color: "#fff" }}>
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="h1" color="#fff">
-            Hello, Ahshan Habib!
+            Hello, Mr: John Doe!
           </Typography>
         </Toolbar>
       </AppBar>
       <Box
         component="nav"
         sx={{ width: { sm: drawerWidth }, flexShrink: { sm: 0 } }}
-        aria-label="mailbox folders"
-      >
+        aria-label="mailbox folders">
         <Drawer
           variant="temporary"
           open={mobileOpen}
@@ -77,8 +74,7 @@ const DashboardMenu = ({ children }: { children: React.ReactNode }) => {
               boxSizing: "border-box",
               width: drawerWidth,
             },
-          }}
-        >
+          }}>
           <SideNavbar />
         </Drawer>
         <Drawer
@@ -90,8 +86,7 @@ const DashboardMenu = ({ children }: { children: React.ReactNode }) => {
               width: drawerWidth,
             },
           }}
-          open
-        >
+          open>
           <SideNavbar />
         </Drawer>
       </Box>
@@ -101,8 +96,7 @@ const DashboardMenu = ({ children }: { children: React.ReactNode }) => {
           flexGrow: 1,
           p: 3,
           width: { sm: `calc(100% - ${drawerWidth}px)` },
-        }}
-      >
+        }}>
         <Toolbar />
 
         {children}

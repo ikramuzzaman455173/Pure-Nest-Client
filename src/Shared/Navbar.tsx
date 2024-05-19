@@ -1,11 +1,8 @@
 "use client";
 
 import {
-  Badge,
   Box,
-  Button,
   Container,
-  Divider,
   Drawer,
   Stack,
   Typography,
@@ -17,245 +14,146 @@ import Link from "next/link";
 import {
   AlignJustify,
   BaggageClaim,
-  Headset,
-  Heart,
   Home,
   LayoutDashboard,
-  LogIn,
   ShoppingBasket,
-  ShoppingCart,
   User,
 } from "lucide-react";
-import { useAppDispatch, useAppSelector } from "@/redux/hooks";
-import { logoutUser, useCureentToken } from "@/redux/features/auth/authSlice";
-import { useCureentCartData } from "@/redux/features/cart/cartSlice";
 
 const Navbar = () => {
   const [open, setOpen] = React.useState(false);
-  const token = useAppSelector(useCureentToken);
-  const cartData = useAppSelector(useCureentCartData);
-  const dispatch = useAppDispatch();
 
   const toggleDrawer = (newOpen: boolean) => () => {
     setOpen(newOpen);
   };
 
   return (
-    <div className="bg-[#0C1734] text-white">
+    <div className="bg-custom-dark text-white fixed top-0 z-[99] w-full border-2 border-t-0 border-l-0 border-r-0 shadow-md border-b-custom-white">
       <Container>
         <Stack
-          display="flex"
           direction="row"
           alignItems="center"
           justifyContent="space-between"
-          padding="15px 5px"
-        >
+          padding="15px 5px">
           <Box component={Link} href="/" display="flex" alignItems="center">
-            <Image src={logoImg} width={30} height={30} alt="Website Logo" />
+            <Image src={logoImg} width={50} height={50} alt="Website Logo" />
             <Typography variant="h6" component="h2" marginLeft="3px">
-              Baby Care
+              <p>Pure Nest</p>
             </Typography>
           </Box>
           <Stack>
             <Box>
-              <div className=" hidden lg:block">
-                <div className=" flex gap-4">
-                  <Typography component={Link} href="/">
+              <div className="hidden lg:block">
+                <div className="flex gap-4">
+                  <Typography
+                    component={Link}
+                    href="/"
+                    className="hover:text-custom-main transition-colors">
                     Home
                   </Typography>
-                  <Typography component={Link} href="/products">
+                  <Typography
+                    component={Link}
+                    href="/products"
+                    className="hover:text-custom-main transition-colors">
                     Products
                   </Typography>
-                  <Typography component={Link} href="/flash-sale">
+                  <Typography
+                    component={Link}
+                    href="/flash-sale"
+                    className="hover:text-custom-main transition-colors">
                     Flash Sale
                   </Typography>
-                  <Typography component={Link} href="/about-us">
+                  <Typography
+                    component={Link}
+                    href="/about-us"
+                    className="hover:text-custom-main transition-colors">
                     About Us
                   </Typography>
-                  <Typography component={Link} href="/contact-us">
+                  {/* <Typography
+                    component={Link}
+                    href="/contact-us"
+                    className="hover:text-custom-main transition-colors">
                     Contact Us
+                  </Typography> */}
+                  <Typography
+                    component={Link}
+                    href="/dashboard"
+                    className="hover:text-custom-main transition-colors">
+                    Dashboard
                   </Typography>
-                  {token && (
-                    <Typography component={Link} href="/dashboard">
-                      Dashboard
-                    </Typography>
-                  )}
-
-                  <Divider
-                    orientation="vertical"
-                    variant="fullWidth"
-                    flexItem
-                    sx={{ borderColor: "#fff", opacity: 0.5 }}
-                  />
-                  <Stack
-                    display="flex"
-                    flexDirection="row"
-                    alignItems="center"
-                    gap={2}
-                  >
-                    {token ? (
-                      <Box>
-                        <Button
-                          onClick={() => dispatch(logoutUser())}
-                          sx={{
-                            width: "80px",
-                            padding: "4px 0",
-                            marginLeft: "5px",
-                            backgroundColor: "#EF4444",
-                            "&:hover": {
-                              backgroundColor: "#EF4444",
-                            },
-                          }}
-                        >
-                          Logout
-                        </Button>
-                      </Box>
-                    ) : (
-                      <Box component={Link} href="/login">
-                        <LogIn className=" cursor-pointer" size={25} />
-                      </Box>
-                    )}
-
-                    <Badge
-                      badgeContent={0}
-                      color="primary"
-                      sx={{ userSelect: "none" }}
-                      showZero
-                    >
-                      <Heart className=" cursor-pointer " size={25} />
-                    </Badge>
-                    <Badge
-                      badgeContent={cartData?.length}
-                      color="primary"
-                      sx={{ userSelect: "none" }}
-                      showZero
-                    >
-                      <Box component={Link} href="/cart">
-                        {" "}
-                        <ShoppingCart className=" cursor-pointer" size={25} />
-                      </Box>
-                    </Badge>
-                  </Stack>
                 </div>
               </div>
-              <div className=" block lg:hidden">
+              <div className="block lg:hidden">
                 <AlignJustify
                   onClick={toggleDrawer(true)}
-                  className=" cursor-pointer"
+                  className="cursor-pointer"
                 />
-                <div>
-                  <Drawer
-                    open={open}
-                    onClose={toggleDrawer(false)}
-                    PaperProps={{
-                      style: {
-                        width: "220px",
-                        padding: "10px",
-                      },
-                    }}
-                  >
-                    <Box display="flex" flexDirection="column" gap={1}>
-                      <Box display="flex">
-                        <Home size={20} className="mr-1" />
-                        <Typography component={Link} href="/">
-                          Home
-                        </Typography>
-                      </Box>
-                      <Box display="flex">
-                        <ShoppingBasket size={20} className="mr-1" />
-                        <Typography component={Link} href="/products">
-                          Products
-                        </Typography>
-                      </Box>
-                      <Box display="flex">
-                        <BaggageClaim size={20} className="mr-1" />
-                        <Typography component={Link} href="/flash-sale">
-                          Flash Sale
-                        </Typography>
-                      </Box>
-                      <Box display="flex">
-                        <User size={20} className="mr-1" />
-                        <Typography component={Link} href="/about-us">
-                          About Us
-                        </Typography>
-                      </Box>
-                      <Box display="flex">
-                        <Headset size={20} className="mr-1" />
-                        <Typography component={Link} href="/contact-us">
-                          Contact Us
-                        </Typography>
-                      </Box>
-
-                      <Box display="flex">
-                        <LayoutDashboard size={20} className="mr-1" />
-                        {token && (
-                          <Typography component={Link} href="/dashboard">
-                            Dashboard
-                          </Typography>
-                        )}
-                      </Box>
+                <Drawer
+                  open={open}
+                  onClose={toggleDrawer(false)}
+                  PaperProps={{
+                    style: {
+                      width: "220px",
+                      padding: "10px",
+                    },
+                  }}>
+                  <Box display="flex" flexDirection="column" gap={1}>
+                    <Box display="flex">
+                      <Home size={20} className="mr-1" />
+                      <Typography
+                        component={Link}
+                        href="/"
+                        className="hover:text-custom-main transition-colors">
+                        Home
+                      </Typography>
                     </Box>
-                    <Divider
-                      orientation="horizontal"
-                      variant="fullWidth"
-                      flexItem
-                      sx={{
-                        borderColor: "#363636",
-                        opacity: 0.2,
-                        margin: "15px 0px",
-                      }}
-                    />
-                    <Stack
-                      display="flex"
-                      flexDirection="row"
-                      alignItems="center"
-                      gap={2}
-                    >
-                      {token ? (
-                        <Box>
-                          <Button
-                            onClick={() => dispatch(logoutUser())}
-                            sx={{
-                              width: "80px",
-                              padding: "4px 0",
-                              marginLeft: "5px",
-                              backgroundColor: "#EF4444",
-                              "&:hover": {
-                                backgroundColor: "#EF4444",
-                              },
-                            }}
-                          >
-                            Logout
-                          </Button>
-                        </Box>
-                      ) : (
-                        <Box component={Link} href="/login">
-                          <LogIn className=" cursor-pointer" size={25} />
-                        </Box>
-                      )}
-
-                      <Badge
-                        badgeContent={0}
-                        color="info"
-                        sx={{ userSelect: "none" }}
-                        showZero
-                      >
-                        <Heart className=" cursor-pointer " size={25} />
-                      </Badge>
-                      <Badge
-                        badgeContent={0}
-                        color="info"
-                        sx={{ userSelect: "none" }}
-                        showZero
-                      >
-                        <Box component={Link} href="/cart">
-                          {" "}
-                          <ShoppingCart className=" cursor-pointer" size={25} />
-                        </Box>
-                      </Badge>
-                    </Stack>
-                  </Drawer>
-                </div>
+                    <Box display="flex">
+                      <ShoppingBasket size={20} className="mr-1" />
+                      <Typography
+                        component={Link}
+                        href="/products"
+                        className="hover:text-custom-main transition-colors">
+                        Products
+                      </Typography>
+                    </Box>
+                    <Box display="flex">
+                      <BaggageClaim size={20} className="mr-1" />
+                      <Typography
+                        component={Link}
+                        href="/flash-sale"
+                        className="hover:text-custom-main transition-colors">
+                        Flash Sale
+                      </Typography>
+                    </Box>
+                    <Box display="flex">
+                      <User size={20} className="mr-1" />
+                      <Typography
+                        component={Link}
+                        href="/about-us"
+                        className="hover:text-custom-main transition-colors">
+                        About Us
+                      </Typography>
+                    </Box>
+                    {/* <Box display="flex">
+                      <Headset size={20} className="mr-1" />
+                      <Typography
+                        component={Link}
+                        href="/contact-us"
+                        className="hover:text-custom-main transition-colors">
+                        Contact Us
+                      </Typography>
+                    </Box> */}
+                    <Box display="flex">
+                      <LayoutDashboard size={20} className="mr-1" />
+                      <Typography
+                        component={Link}
+                        href="/dashboard"
+                        className="hover:text-custom-main transition-colors">
+                        Dashboard
+                      </Typography>
+                    </Box>
+                  </Box>
+                </Drawer>
               </div>
             </Box>
           </Stack>

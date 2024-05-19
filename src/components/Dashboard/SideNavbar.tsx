@@ -63,7 +63,7 @@ const SideNavbar = () => {
             color: "#0C1734",
           }}
         >
-          Baby Care
+          pure nest
         </Typography>
       </Box>
 

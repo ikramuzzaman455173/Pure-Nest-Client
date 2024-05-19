@@ -51,7 +51,7 @@ const RegisterPage = () => {
               color: "#0C1734",
             }}
           >
-            Baby Care
+            Pure Nest
           </Typography>
         </Box>
         <Stack

@@ -1,11 +1,11 @@
 import { Box, Stack, Typography } from "@mui/material";
 
 const addressSummury = {
-  name: "Ahshan Habib",
-  email: "ahshan.habib026@gmail.com",
+  name: "Mr.John Doe",
+  email: "johndoe026@gmail.com",
   country: "Bangladesh",
-  streetAdress: "Dhaka, Shiddhirgonj, Narayangonj",
-  postCode: "1200",
+  streetAdress: "Dhaka,Uttora",
+  postCode: "1230",
   city: "Dhaka",
   mobileNumber: "+8801646418365",
 };

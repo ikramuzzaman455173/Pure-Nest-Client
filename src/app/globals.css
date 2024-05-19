@@ -2,3 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+padding:0;
+margin:0;
+box-sizing:border-box;
+text-transform: capitalize;
+transition:.3s all linear;
+}

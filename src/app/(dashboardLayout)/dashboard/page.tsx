@@ -3,7 +3,7 @@ import { Box, Typography } from "@mui/material";
 const MainDashboardPage = () => {
   return (
     <Box>
-      <Typography>Welocme To Baby Care Dashboard!</Typography>
+      <Typography>Welocme To pure nest Dashboard!</Typography>
     </Box>
   );
 };

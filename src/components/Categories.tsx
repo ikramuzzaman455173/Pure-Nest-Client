@@ -15,7 +15,7 @@ const Categories = () => {
             Top Categories
           </h1>
           <p className=" text-lg font-light">
-            Discover top baby care essentials for every stage of parenthood.
+            Discover top pure nest essentials for every stage of parenthood.
           </p>
         </div>
         <div className=" grid grid-cols-2 lg:grid-cols-4 gap-5 max-w-3xl mx-auto mt-8">
