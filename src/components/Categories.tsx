@@ -13,11 +13,11 @@ const Categories = () => {
             Top Categories
           </h1>
           <p className=" text-lg font-light">
-            Discover top pure nest essentials for every stage of parenthood.
+            Discover top pure nest essentials products for cleanings.
           </p>
         </div>
         <div className=" grid grid-cols-2 lg:grid-cols-4 gap-5 max-w-3xl mx-auto mt-8">
-          {categoryData.slice(0, 6).map((category: any) => (
+          {categoryData?.map((category: any) => (
             <CategoriesCard category={category} key={category.id} />
           ))}
         </div>

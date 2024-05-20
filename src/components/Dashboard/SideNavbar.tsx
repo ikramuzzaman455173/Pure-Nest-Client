@@ -17,7 +17,7 @@ const SideNavbar = () => {
   const currPathName = usePathname();
 
   const drawer = (
-    <div>
+    <div className="bg-indigo-100 h-screen">
       <List>
         {SideMenuItems("admin" as TUserRole).map((item, index) => (
           <Link href={item.path} key={index}>
@@ -29,8 +29,7 @@ const SideNavbar = () => {
                   ? { borderRight: "3px solid #FE4444", borderRadius: "5px" }
                   : ""),
                 mb: "8px",
-              }}
-            >
+              }}>
               <ListItemButton>
                 <ListItemIcon>{item.icon ? <item.icon /> : ""}</ListItemIcon>
                 <ListItemText primary={item.title} />

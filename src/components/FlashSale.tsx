@@ -1,4 +1,4 @@
-import { flashSaleProductData } from "../../src/data/FlashProductData";
+// import { flashSaleProductData } from "../../src/data/FlashProductData";
 import { IProduct } from "@/types/type.global";
 import ProductsCard from "@/utils/ProductsCard";
 import { Button, Container, Stack, Typography } from "@mui/material";
@@ -7,15 +7,15 @@ import Link from "next/link";
 import React from "react";
 
 const FlashSale = async () => {
-  // const res = await fetch(
-  //   "https://baby-care-server-azure.vercel.app/api/v1/products",
-  //   {
-  //     next: {
-  //       revalidate: 30,
-  //     },
-  //   }
-  // );
-  // const data = await res.json();
+  const res = await fetch(
+    "https://pure-nest-server.vercel.app/api/products",
+    {
+      next: {
+        revalidate: 30,
+      },
+    }
+  );
+  const flashSaleProductData = await res.json();
 
   // const filterData = data?.data?.filter((item: IProduct) => item.flashSale);
 
@@ -45,8 +45,8 @@ const FlashSale = async () => {
         </Button>
       </Stack>
       <div className=" grid grid-cols-2 lg:grid-cols-4 gap-5 mx-auto">
-        {flashSaleProductData.slice(0, 4).map((product) => (
-          <ProductsCard product={product} key={product.id} />
+        {flashSaleProductData.slice(0, 4).map((product:IProduct) => (
+          <ProductsCard product={product} key={product._id} />
         ))}
       </div>
     </Container>

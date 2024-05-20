@@ -44,7 +44,7 @@ const TopNavbar = () => {
         </div>
         <div className="flex items-center">
           <div className=" flex flex-col mr-3 text-white">
-            <h1 className="text-md font-semibold">Ahshan Habib</h1>
+            <h1 className="text-md font-semibold">John Doe</h1>
             <p className="text-md font-light">Admin</p>
           </div>
           <div>

@@ -28,7 +28,7 @@ interface IProduct {
 
 const AllProducts = async () => {
   const res = await fetch(
-    "https://baby-care-server-azure.vercel.app/api/v1/products",
+    "https://pure-nest-server.vercel.app/api/products",
     {
       cache: "no-store",
     }
@@ -51,7 +51,7 @@ const AllProducts = async () => {
               </TableRow>
             </TableHead>
             <TableBody>
-              {data.data.map((item: IProduct, index: number) => (
+              {data?.map((item: IProduct, index: number) => (
                 <TableRow
                   key={item._id}
                   sx={{ "&:last-child td, &:last-child th": { border: 0 } }}

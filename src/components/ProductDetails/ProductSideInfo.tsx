@@ -54,8 +54,7 @@ const ProductSideInfo: React.FC<TProductProps> = ({ product }) => {
           justifyContent: "space-between",
           flexDirection: "row",
           marginTop: "20px",
-        }}
-      >
+        }}>
         <Box
           display="flex"
           alignItems="center"
@@ -63,14 +62,22 @@ const ProductSideInfo: React.FC<TProductProps> = ({ product }) => {
             border: "1px solid #c1c1c1",
             padding: "6px 20px",
             borderRadius: "5px",
-          }}
-        >
+          }}>
           <Minus color="#363636" size={20} />
           <h1 className="text-lg font-semibold mx-5">0</h1>
           <Plus color="#363636" size={20} />
         </Box>
         <Box component="button" onClick={() => dispatch(addToCart(product))}>
-          <Button size="large">Add to Cart </Button>
+          <Button
+            sx={{
+              ":hover": {
+                background: "#1e293b",
+              },
+            }}
+            variant="contained"
+            size="large">
+            Add to Cart{" "}
+          </Button>
         </Box>
       </Stack>
       <hr className=" my-5 border-gray-100 border-[1px]" />
@@ -78,8 +85,7 @@ const ProductSideInfo: React.FC<TProductProps> = ({ product }) => {
         display="flex"
         flexDirection="row"
         alignItems="center"
-        justifyContent="space-between"
-      >
+        justifyContent="space-between">
         <Box display="flex" alignItems="center">
           <Heart size={20} color="#363636" />
           <Typography
@@ -89,8 +95,7 @@ const ProductSideInfo: React.FC<TProductProps> = ({ product }) => {
               fontSize: "15px",
               marginLeft: "5px",
               "&:hover": { color: "#0C1734" },
-            }}
-          >
+            }}>
             Add to wishlist
           </Typography>
         </Box>
@@ -103,8 +108,7 @@ const ProductSideInfo: React.FC<TProductProps> = ({ product }) => {
               fontSize: "15px",
               marginLeft: "5px",
               "&:hover": { color: "#0C1734" },
-            }}
-          >
+            }}>
             Add to compare
           </Typography>
         </Box>
@@ -117,8 +121,7 @@ const ProductSideInfo: React.FC<TProductProps> = ({ product }) => {
               fontSize: "15px",
               marginLeft: "5px",
               "&:hover": { color: "#0C1734" },
-            }}
-          >
+            }}>
             Ask about product
           </Typography>
         </Box>
@@ -126,9 +129,8 @@ const ProductSideInfo: React.FC<TProductProps> = ({ product }) => {
       <hr className=" my-5 border-gray-100 border-[1px]" />
       <Box>
         <Typography
-          sx={{ fontSize: "18px", fontWeight: "500", color: "#363636" }}
-        >
-          Category: <span className="text-[#0C1734]">{product.category}</span>
+          sx={{ fontSize: "18px", fontWeight: "500", color: "#363636" }}>
+          Category: <span className="text-custom-mainDark tracking-wider">{product.category}</span>
         </Typography>
       </Box>
       <SocialIcons />

@@ -42,7 +42,7 @@ const OrderInfo = () => {
         }}
       >
         <Typography>Email:</Typography>
-        <Typography fontWeight={600}>ahshan.habib026@gmail.com</Typography>
+        <Typography fontWeight={600}>purenest@gmail.com</Typography>
       </Box>
       <Box
         sx={{

@@ -1,17 +1,17 @@
-import { flashSaleProductData } from "@/data/FlashProductData";
+// import { flashSaleProductData } from "@/data/FlashProductData";
 import { IProduct } from "@/types/type.global";
 import ProductsCard from "@/utils/ProductsCard";
 import React from "react";
 
 const AllProducts = async () => {
-  // const res = await fetch(
-  //   "https://baby-care-server-azure.vercel.app/api/v1/products",
-  //   {
-  //     cache: "no-cache",
-  //   }
-  // );
+  const res = await fetch(
+    "https://pure-nest-server.vercel.app/api/products",
+    {
+      cache: "no-cache",
+    }
+  );
 
-  // const data = await res.json();
+  const flashSaleProductData = await res.json();
 
   return (
     <div className="ml-0 lg:ml-4 mt-5 lg:mt-20">
@@ -25,8 +25,8 @@ const AllProducts = async () => {
         </p>
       </div>
       <div className=" grid md:grid-cols-2 grid-cols-1 lg:grid-cols-3 gap-5 mx-auto">
-        {flashSaleProductData?.map((product) => (
-          <ProductsCard product={product} key={product.id} />
+        {flashSaleProductData?.map((product:IProduct) => (
+          <ProductsCard product={product} key={product._id} />
         ))}
       </div>
     </div>

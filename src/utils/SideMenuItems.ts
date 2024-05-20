@@ -27,11 +27,11 @@ export const SideMenuItems = (role: TUserRole) => {
           path: "/dashboard/products/add-product",
           icon: AddBusinessIcon,
         },
-        {
-          title: "All Orders",
-          path: "/dashboard/orders",
-          icon: StoreMallDirectoryIcon,
-        }
+        // {
+        //   title: "All Orders",
+        //   path: "/dashboard/orders",
+        //   icon: StoreMallDirectoryIcon,
+        // }
       );
       break;
     case USER_ROLE.USER:

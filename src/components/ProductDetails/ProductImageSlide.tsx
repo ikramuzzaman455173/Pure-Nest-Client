@@ -13,27 +13,15 @@ type TProductProps = {
 
 const ProductImageSlide: React.FC<TProductProps> = ({ product }) => {
   return (
-    <div className="flex items-center">
-      <div>
-        <Image src={DaipersOne} width={100} height={100} alt="Daipers Image" />
-        <Image src={DaipersTwo} width={100} height={100} alt="Daipers Image" />
-        <Image
-          src={DaipersThree}
-          width={100}
-          height={100}
-          alt="Daipers Image"
-        />
-        <Image src={DaipersFour} width={100} height={100} alt="Daipers Image" />
-      </div>
-      <div>
-        <Image
-          src={product.image}
-          width={400}
-          height={400}
-          alt="Daipers Image"
-        />
-      </div>
-    </div>
+    <>
+      <Image
+        className="w-[200px] border hover:shadow-md h-[550px] object-fit mx-auto p-5 relative transform transition-transform duration-300 hover:scale-110 overflow-hidden "
+        src={product?.image}
+        width={500}
+        height={500}
+        alt="Product Image"
+      />
+    </>
   );
 };
 

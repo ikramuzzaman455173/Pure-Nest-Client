@@ -46,7 +46,7 @@ const ProductsCard = ({ product }: any) => {
               color: "#3498db",
             },
           }}>
-          <Link href={`/products/${product.id}`}>{product.title}</Link>
+          <Link href={`/products/${product._id}`}>{product.title}</Link>
         </Typography>
         <Stack
           display="flex"

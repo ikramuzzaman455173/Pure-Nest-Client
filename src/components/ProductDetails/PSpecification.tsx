@@ -2,35 +2,33 @@ import React from "react";
 
 const PSpecification = () => {
   return (
-    <div className="mt-8">
+    <div className="mt-8 p-6 bg-gray-50 rounded-lg shadow-md">
       <div>
-        <h1 className="text-lg font-medium">Ingredients:</h1>
-        <p className="text-lg font-light text-gray-700">
-          Skimmed milk powder, lactose, vegetable oils (palm, rapeseed,
-          sunflower), palm kernel fat, calcium carbonate, calcium salts of
-          phosphoric acid, vitamin C, ferrous sulphate, stabilizer: L (+) -
-          lactic acid, vitamin D, riboflavin , vitamin A, potassium iodate.
+        <h1 className="text-xl font-semibold text-gray-800">Ingredients:</h1>
+        <p className="text-lg font-light text-gray-700 mt-2">
+          Water, Sodium Hypochlorite, Sodium Hydroxide, Fragrance, Surfactants, Stabilizers.
         </p>
       </div>
-      <div className="my-3">
-        <h1 className="text-lg font-medium">Nutritional values:</h1>
-        <p className="text-lg font-medium text-gray-700">
-          Callories: <span className=" font-light">110 kcal</span>
-        </p>
-        <p className="text-lg font-medium text-gray-700">
-          Total Fat: <span className=" font-light"> 0g / 0%</span>
-        </p>
-        <p className="text-lg font-medium text-gray-700">
-          Total Carbohydrate: <span className=" font-light">26g / 9%</span>
-        </p>
-        <p className="text-lg font-medium text-gray-700">
-          Protein: <span className=" font-light">3g / 10%</span>
-        </p>
+      <div className="my-6">
+        <h1 className="text-xl font-semibold text-gray-800">Product Features:</h1>
+        <ul className="list-disc list-inside text-lg font-light text-gray-700 mt-2">
+          <li>Kills 99.9% of bacteria and viruses</li>
+          <li>Effective on various surfaces</li>
+          <li>Streak-free shine</li>
+          <li>Fresh, clean scent</li>
+          <li>Quick-drying formula</li>
+        </ul>
       </div>
       <div>
-        <h1 className="text-lg font-medium">Available for age:</h1>
-        <p className="text-lg font-light text-gray-700">
-          6-12 months, 12-24 months
+        <h1 className="text-xl font-semibold text-gray-800">Directions for Use:</h1>
+        <p className="text-lg font-light text-gray-700 mt-2">
+          Spray directly onto the surface to be cleaned. Wipe with a clean, dry cloth or sponge. For heavily soiled areas, allow the product to sit for a few minutes before wiping. No need to rinse.
+        </p>
+      </div>
+      <div className="mt-6">
+        <h1 className="text-xl font-semibold text-gray-800">Safety Information:</h1>
+        <p className="text-lg font-light text-gray-700 mt-2">
+          Keep out of reach of children. Avoid contact with eyes. In case of eye contact, rinse thoroughly with water. If swallowed, seek medical advice immediately. Use in a well-ventilated area.
         </p>
       </div>
     </div>

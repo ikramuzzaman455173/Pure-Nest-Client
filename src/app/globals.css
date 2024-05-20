@@ -12,3 +12,15 @@ transition:.3s all linear;
 html,body{
   overflow-x: hidden;
 }
+
+
+@keyframes scrolling-text {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-scrolling-text {
+  display: inline-block;
+  animation: scrolling-text 10s linear infinite;
+  white-space: nowrap;
+}

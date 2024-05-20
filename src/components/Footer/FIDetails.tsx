@@ -18,8 +18,8 @@ const FIDetails = () => {
       </Box>
       <Box display="flex" alignItems="center" sx={{ marginBottom: "8px" }}>
         <Mail size={20} className="mr-2" />
-        <Link href="mailto:ahshan.habib026@gmail.com">
-          ahshan.habib026@gmail.com
+        <Link href="mailto:purenest@gmail.com">
+          purenest@gmail.com
         </Link>
       </Box>
       <Box display="flex" alignItems="center" sx={{ marginBottom: "8px" }}>

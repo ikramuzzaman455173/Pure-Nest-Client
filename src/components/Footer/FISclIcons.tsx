@@ -13,16 +13,16 @@ const FISclIcons = () => {
   return (
     <div>
       <div className="flex items-center mt-2">
-        <Link target="_blank" href="https://web.facebook.com/AhshanHabib26">
+        <Link target="_blank" href="https://web.facebook.com">
           <FaFacebookF className={Styles.SCLIcons} />
         </Link>
-        <Link target="_blank" href="https://www.linkedin.com/in/ahshanhabib26/">
+        <Link target="_blank" href="https://www.linkedin.com">
           <FaLinkedin className={Styles.SCLIcons} />
         </Link>
-        <Link target="_blank" href="https://web.facebook.com/AhshanHabib26">
+        <Link target="_blank" href="https://web.facebook.com">
           <FaInstagram className={Styles.SCLIcons} />
         </Link>
-        <Link target="_blank" href="https://www.twitter.com/ahshanhabib26/">
+        <Link target="_blank" href="https://www.twitter.com">
           <FaTwitter className={Styles.SCLIcons} />
         </Link>
         <Link target="_blank" href="https://www.pinterest.com/">
