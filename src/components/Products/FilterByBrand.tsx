@@ -8,18 +8,22 @@ import {
 import React from "react";
 
 const brands = [
-  "Diapers",
-  "Family Care",
-  "Philips Avent",
-  "Golds Nutrition",
-  "Johnson's Baby",
-  "Nutriity",
-  "Huggies",
-  "VitaMinus Nutration",
-  "FridaBaby",
-  "Safety 1st",
-  "Infant Optics",
+  "Lysol",
+  "Dawn",
+  "Clorox",
+  "Windex",
+  "Tide",
+  "O-Cedar",
+  "Scotch-Brite",
+  "Bissell",
+  "Bona",
+  "Playtex",
+  "Glad",
+  "AmazonBasics",
+  "Zep",
+  "Easy-Off"
 ];
+
 
 const FilterByBrand = () => {
   return (

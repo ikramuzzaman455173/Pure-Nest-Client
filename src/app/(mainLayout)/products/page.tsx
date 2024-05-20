@@ -12,7 +12,7 @@ const ProductsPage = () => {
       <Container>
         <div className="grid grid-cols-1 lg:grid-cols-11 my-8">
           <div className="lg:col-span-3">
-            <div className="w-full border p-3 rounded-md mt-8 lg:mt-0">
+            <div className="w-full border p-3 rounded-md mt-20">
               <FilterByPrice />
               <Divider sx={{ margin: "25px 0" }} />
               <FilterByCategories />

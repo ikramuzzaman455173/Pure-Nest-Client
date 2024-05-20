@@ -7,14 +7,14 @@ import {
 } from "@mui/material";
 
 const categories = [
-  "Diapers",
-  "Fresh Milk",
-  "Milk Powders",
-  "Nutritions",
-  "Vitamins & Health",
-  "Family Care",
-  "Accessories",
-  "Toys",
+  "Household Cleaners",
+  "Kitchen Cleaners",
+  "Disinfectants",
+  "Glass Cleaners",
+  "Laundry Supplies",
+  "Floor Cleaning Tools",
+  "Cleaning Tools",
+  "Bathroom Cleaners"
 ];
 
 const FilterByCategories = () => {

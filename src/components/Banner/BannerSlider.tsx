@@ -156,7 +156,7 @@ const BannerSlider = () => {
                   alt="Banner Image"
                 />
                 <span
-                  className={`inline-block absolute top-0 right-0 p-4 capitalize font-semibold text-lg text-center text-white rounded-full w-[90px] h-[90px] ${
+                  className={`inline-block absolute top-0 right-0 p-4 capitalize font-semibold text-lg text-center border-2 text-white rounded-full w-[90px] h-[90px] ${
                     bgColor[index % bgColor.length]
                   }`}
                 >

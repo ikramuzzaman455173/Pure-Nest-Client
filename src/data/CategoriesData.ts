@@ -1,55 +1,42 @@
-import MilkPowder from "../assets/icons/milk-powders.png";
-import Diapers from "../assets/icons/diapers.png";
-import FreshMilk from "../assets/icons/fresh-milks.png";
-import Nutrition from "../assets/icons/nutritions.png";
-import VitaminsHelath from "../assets/icons/vitamins.png";
-import FamilyCare from "../assets/icons/family-care.png";
-import Accessories from "../assets/icons/Accessories.png";
-import Toys from "../assets/icons/toys.png";
-
-const categoriesData = [
+export const categoryData = [
   {
     id: "1",
-    title: "Diapers",
-    image: Diapers,
+    title: "Household Cleaners",
+    image: "https://m.media-amazon.com/images/I/61dPTI4Ui2L._AC_UL320_.jpg"
   },
   {
     id: "2",
-    title: "Fresh Milk",
-    image: FreshMilk,
+    title: "Kitchen Cleaners",
+    image: "https://m.media-amazon.com/images/I/71eIMxNVKsL._AC_UL320_.jpg"
   },
   {
     id: "3",
-    title: "Milk Powders",
-    image: MilkPowder,
+    title: "Disinfectants",
+    image: "https://m.media-amazon.com/images/I/71R1lnAdiFL._AC_UL320_.jpg"
   },
   {
     id: "4",
-    title: "Nutritions",
-    image: Nutrition,
+    title: "Glass Cleaners",
+    image: "https://m.media-amazon.com/images/I/61ZlOTu-DlL._AC_UL320_.jpg"
   },
   {
     id: "5",
-    title: "Vitamins & Health",
-    image: VitaminsHelath,
+    title: "Laundry Supplies",
+    image: "https://m.media-amazon.com/images/I/71algDbj2nL._AC_UL320_.jpg"
   },
   {
     id: "6",
-    title: "Family Care",
-    image: FamilyCare,
+    title: "Floor Cleaning Tools",
+    image: "https://m.media-amazon.com/images/I/81UxrpZXUsL._AC_UL320_.jpg"
   },
   {
     id: "7",
-    title: "Accessories",
-    image: Accessories,
+    title: "Bathroom Cleaners",
+    image: "https://m.media-amazon.com/images/I/61sMdrnw32S._AC_UL320_.jpg"
   },
   {
     id: "8",
-    title: "Toys",
-    image: Toys,
-  },
+    title: "Cleaning Tools",
+    image: "https://m.media-amazon.com/images/I/71ONVDecu2L._AC_UL320_.jpg"
+  }
 ];
-
-export const getAllCategories = () => {
-    return categoriesData
-}

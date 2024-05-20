@@ -9,3 +9,6 @@ box-sizing:border-box;
 text-transform: capitalize;
 transition:.3s all linear;
 }
+html,body{
+  overflow-x: hidden;
+}
