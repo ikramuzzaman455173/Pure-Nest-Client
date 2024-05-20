@@ -5,7 +5,7 @@
   - Frontend: NextJS, TypeScript, Tailwind, Material UI.
   - Backend: Express, MongoDB, Mongoose, JavaScript.
 - Project URL:
-  - For Frontend: [`https://baby-care-client-flame.vercel.app/`]
+  - For Frontend: [`https://pure-nest.vercel.app/`]
 
 ### Project Details (Frontend)
 
